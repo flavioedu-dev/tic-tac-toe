@@ -1,4 +1,5 @@
 click = document.getElementById("fContainer")
+let statusJg = document.getElementById("status")
 
 click.style.pointerEvents = "none"
 
@@ -15,9 +16,8 @@ function getName(){
 
     click.style.pointerEvents = "all"
 
-    let status = document.getElementById("status")
     setTimeout(() => {
-        status.innerText = `Vez do player ${jogName1}`
+        statusJg.innerText = `Vez do player ${jogName1}`
     }, 100)
 }
 
@@ -26,16 +26,14 @@ const seq = [["q1","q2","q3"],["q4","q5","q6"],["q7","q8","q9"],["q1","q4","q7"]
 let cont = 0
 
 click.addEventListener('click', (e) => {
-
-    let status = document.getElementById("status")
     
     if(cont%2==0){
         setTimeout(() => {
-            status.innerText = `Vez do player ${jogName2}`
+            statusJg.innerText = `Vez do player ${jogName2}`
         }, 100)
     }else{
         setTimeout(() => {
-            status.innerText = `Vez do player ${jogName1}`
+            statusJg.innerText = `Vez do player ${jogName1}`
         }, 100)
     }
     
