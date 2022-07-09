@@ -24,6 +24,7 @@ function getName(){
 const seq = [["q1","q2","q3"],["q4","q5","q6"],["q7","q8","q9"],["q1","q4","q7"],["q2","q5","q8"],["q3","q6","q9"],["q1","q5","q9"],["q3","q5","q7"]]
 
 let cont = 0
+let win= 0
 
 click.addEventListener('click', (e) => {
     
@@ -88,6 +89,7 @@ click.addEventListener('click', (e) => {
 
                 if(jog1 == 3){
                     click.style.pointerEvents = "none"
+                    win = 1
                     setTimeout(() => {
                         alert(`${jogName1} venceu!`)
                         confirm("Quer iniciar um novo jogo?")?document.location.reload(true): console.log("ok")
@@ -95,6 +97,7 @@ click.addEventListener('click', (e) => {
                     
                 }else if(jog2 == 3){
                     click.style.pointerEvents = "none"
+                    win = 1
                     setTimeout(() => {
                         alert((`${jogName2} venceu!`))
                         confirm("Quer iniciar um novo jogo?")?document.location.reload(true): console.log("ok")
@@ -107,7 +110,7 @@ click.addEventListener('click', (e) => {
         }
         
     }
-    if(cont == 9){
+    if(cont == 9 & win ==0){
         setTimeout(() => {
             alert("Deu zebra!")
             confirm("Quer iniciar um novo jogo?")?document.location.reload(true): console.log("ok")
