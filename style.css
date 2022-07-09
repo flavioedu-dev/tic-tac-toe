@@ -4,15 +4,14 @@
 
 body{
     text-align: center;
-    background-color: #885032
+    background-color: #885032;
+    margin-top: 1em
 }
 
 .equipe{
     width: 50%;
     display: flex;
     justify-content: space-between;
-
-    /* border: 1px solid black; */
 
     font-size: 1.4em;
     margin: 2em auto;
@@ -22,7 +21,6 @@ body{
     text-indent: 5px;
 }
 #btn{
-    /* background-color: #66b83f; */
     padding: 0 1em;
     border: none;
     background-color: #66b83f;
@@ -31,6 +29,10 @@ body{
 }
 .ml{
     margin-left: 0.5em;
+}
+
+#status{
+    margin-bottom: 0.5em;
 }
 
 .container{

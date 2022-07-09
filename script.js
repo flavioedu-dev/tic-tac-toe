@@ -10,10 +10,15 @@ function getName(){
         jogName1 = "Jogador 1"
     }
     if (jogName2 ==""){
-        jogName2 = "Jogador 1"
+        jogName2 = "Jogador 2"
     }
 
     click.style.pointerEvents = "all"
+
+    let status = document.getElementById("status")
+    setTimeout(() => {
+        status.innerText = `Vez do player ${jogName1}`
+    }, 100)
 }
 
 const seq = [["q1","q2","q3"],["q4","q5","q6"],["q7","q8","q9"],["q1","q4","q7"],["q2","q5","q8"],["q3","q6","q9"],["q1","q5","q9"],["q3","q5","q7"]]
@@ -21,6 +26,18 @@ const seq = [["q1","q2","q3"],["q4","q5","q6"],["q7","q8","q9"],["q1","q4","q7"]
 let cont = 0
 
 click.addEventListener('click', (e) => {
+
+    let status = document.getElementById("status")
+    
+    if(cont%2==0){
+        setTimeout(() => {
+            status.innerText = `Vez do player ${jogName2}`
+        }, 100)
+    }else{
+        setTimeout(() => {
+            status.innerText = `Vez do player ${jogName1}`
+        }, 100)
+    }
     
     for(let i=0; i < click.children.length; i++){
         /* console.log(click.children[i]) */
