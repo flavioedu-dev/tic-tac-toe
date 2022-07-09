@@ -1,5 +1,21 @@
 click = document.getElementById("fContainer")
 
+click.style.pointerEvents = "none"
+
+function getName(){
+    jogName1 = document.getElementById("jg1").value
+    jogName2 = document.getElementById("jg2").value
+
+    if (jogName1 ==""){
+        jogName1 = "Jogador 1"
+    }
+    if (jogName2 ==""){
+        jogName2 = "Jogador 1"
+    }
+
+    click.style.pointerEvents = "all"
+}
+
 const seq = [["q1","q2","q3"],["q4","q5","q6"],["q7","q8","q9"],["q1","q4","q7"],["q2","q5","q8"],["q3","q6","q9"],["q1","q5","q9"],["q3","q5","q7"]]
 
 let cont = 0
@@ -7,10 +23,8 @@ let cont = 0
 click.addEventListener('click', (e) => {
     
     for(let i=0; i < click.children.length; i++){
-        /* console.log(click.children[i]) */
 
         for(let j=0; j < click.children[i].children.length; j++){
-            /* console.log(click.children[i].children[j]) */
 
             if(e.target == click.children[i].children[j]){
 
@@ -39,8 +53,6 @@ click.addEventListener('click', (e) => {
 
     for (k in seq){
 
-        /* console.log(seq[k]) */
-
         let jog1 = 0
         let jog2 = 0
 
@@ -58,14 +70,14 @@ click.addEventListener('click', (e) => {
                 if(jog1 == 3){
                     click.style.pointerEvents = "none"
                     setTimeout(() => {
-                        alert("Jogador 1 venceu!")
+                        alert(`${jogName1} venceu!`)
                         confirm("Quer iniciar um novo jogo?")?document.location.reload(true): console.log("ok")
                     }, 100)
                     
                 }else if(jog2 == 3){
                     click.style.pointerEvents = "none"
                     setTimeout(() => {
-                        alert("Jogador 2 venceu!")
+                        alert(("Jogador 2 venceu!"))
                         confirm("Quer iniciar um novo jogo?")?document.location.reload(true): console.log("ok")
                     }, 100)
 
