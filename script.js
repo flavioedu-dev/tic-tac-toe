@@ -3,6 +3,24 @@ let statusJg = document.getElementById("status")
 
 click.style.pointerEvents = "none"
 
+function clickBtn(){
+    for(let i=0; i < click.children.length; i++){
+
+        for(let j=0; j < click.children[i].children.length; j++){
+
+            console.log(click.children[i].children[j])
+            
+            if(click.children[i].children[j].childElementCount != 0){
+                click.children[i].children[j].children[0].remove()      
+            }
+
+            click.children[i].children[j].style.backgroundColor = "#66b83f"
+            
+        }
+    
+    }
+    cont = 0
+}
 function getName(){
     jogName1 = document.getElementById("jg1").value
     jogName2 = document.getElementById("jg2").value
@@ -19,30 +37,52 @@ function getName(){
     setTimeout(() => {
         statusJg.innerText = `Vez do player ${jogName1}`
     }, 100)
+
+    document.getElementById("jg1").value = ""
+    document.getElementById("jg2").value = ""
+
+    clickBtn()
+}
+
+function newJogo(){
+
+    let nJogo = confirm("Quer iniciar um novo jogo?")
+
+    if(nJogo == true){
+        console.log("Sim")
+
+        click.style.pointerEvents = "all"
+
+        for(let i=0; i < click.children.length; i++){
+
+            for(let j=0; j < click.children[i].children.length; j++){
+
+                console.log(click.children[i].children[j])
+                
+                if(click.children[i].children[j].childElementCount != 0){
+                    click.children[i].children[j].children[0].remove()
+                    
+                }
+
+                click.children[i].children[j].style.backgroundColor = "#66b83f"
+                
+            }
+        
+        }
+    } 
+    
 }
 
 const seq = [["q1","q2","q3"],["q4","q5","q6"],["q7","q8","q9"],["q1","q4","q7"],["q2","q5","q8"],["q3","q6","q9"],["q1","q5","q9"],["q3","q5","q7"]]
 
 let cont = 0
-let win= 0
+let win = 0
 
 click.addEventListener('click', (e) => {
     
-    if(cont%2==0){
-        setTimeout(() => {
-            statusJg.innerText = `Vez do player ${jogName2}`
-        }, 100)
-    }else{
-        setTimeout(() => {
-            statusJg.innerText = `Vez do player ${jogName1}`
-        }, 100)
-    }
-    
     for(let i=0; i < click.children.length; i++){
-        /* console.log(click.children[i]) */
 
         for(let j=0; j < click.children[i].children.length; j++){
-            /* console.log(click.children[i].children[j]) */
 
             if(e.target == click.children[i].children[j]){
 
@@ -62,6 +102,16 @@ click.addEventListener('click', (e) => {
 
                 }
 
+                if(cont%2==0){
+                    setTimeout(() => {
+                        statusJg.innerText = `Vez do player ${jogName2}`
+                    }, 100)
+                }else{
+                    setTimeout(() => {
+                        statusJg.innerText = `Vez do player ${jogName1}`
+                    }, 100)
+                }
+
                 cont++
 
             }
@@ -71,36 +121,43 @@ click.addEventListener('click', (e) => {
 
     for (k in seq){
 
-        /* console.log(seq[k]) */
-
         let jog1 = 0
         let jog2 = 0
 
         for(l in seq[k]){
-            console.log(document.getElementById(seq[k][l]))
+
             if(document.getElementById(seq[k][l]).childElementCount == 1){
-                console.log("ok")
+
                 if(document.getElementById(seq[k][l]).children[0].className == 'p1'){
                     jog1++
                 }else if(document.getElementById(seq[k][l]).children[0].className == 'p2'){
                     jog2++
                 }
-                console.log(jog1)
 
                 if(jog1 == 3){
                     click.style.pointerEvents = "none"
                     win = 1
+                    
+                    for(x in seq[k]){
+                        document.getElementById(seq[k][x]).style.backgroundColor = "rgb(204, 18, 18)"
+                    }
+
                     setTimeout(() => {
                         alert(`${jogName1} venceu!`)
-                        confirm("Quer iniciar um novo jogo?")?document.location.reload(true): console.log("ok")
+                        newJogo()
                     }, 100)
                     
                 }else if(jog2 == 3){
                     click.style.pointerEvents = "none"
                     win = 1
+
+                    for(x in seq[k]){
+                        document.getElementById(seq[k][x]).style.backgroundColor = "rgb(204, 18, 18)"
+                    }
+                    
                     setTimeout(() => {
                         alert((`${jogName2} venceu!`))
-                        confirm("Quer iniciar um novo jogo?")?document.location.reload(true): console.log("ok")
+                        newJogo()
                     }, 100)
 
                 }
