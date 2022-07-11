@@ -7,7 +7,9 @@ body{
     background-color: #885032;
     margin-top: 1em
 }
-
+#fContainer, #status, #btnRnc{
+    visibility: hidden;
+}
 .equipe{
     width: 50%;
     display: flex;
@@ -16,7 +18,7 @@ body{
     /* border: 1px solid black; */
 
     font-size: 1.4em;
-    margin: 2em auto;
+    margin: 2em auto 1em auto;
     font-weight: bold;
 }
 .equipe input[type="text"]{
@@ -29,6 +31,9 @@ body{
     background-color: #66b83f;
     font-weight: bold;
     color: #ece4e2;
+}
+#btnRnc{
+    margin-bottom: 1em;
 }
 .ml{
     margin-left: 0.5em;
@@ -50,11 +55,35 @@ body{
     background-color: #66b83f;
     border: 0.5px solid black;
 }
+#history{
+    width: 35%;
+    position: relative;
+    visibility: hidden;
+
+    /* right: 30vw; */
+    bottom: 70vh;
+    margin-left: 1.5vw;
+
+    /* border: 1px solid black; */
+}
+#history table, th, td{
+    width: 100%;
+    border: 1px solid black;
+    background-color: gray;
+}
+#history table{
+    border-collapse: collapse;
+}
+#history th, td{
+    padding: 0.3em;
+    text-align: center;
+}
+#history h3{
+    background-color: #66b83f;
+    padding: 0.3em;
+}
 
 @media (max-width: 600px){
-    body{
-        border: 1px solid black;
-    }
     .equipe{
         width: 100%;
         display: inline-block;
@@ -80,5 +109,12 @@ body{
     }
     .ml{
         margin-left: 0;
+    }
+    #history{
+        left: 10em;
+        bottom: 37em;
+        margin-left: 0;
+    
+        /* border: 1px solid black; */
     }
 }

@@ -10,7 +10,7 @@
 <body>
 
     <h1>Jogo da Velha</h1>
-    <div class="equipe">
+    <div class="equipe" id="equipe">
         <h3 for="jogador1" class="ml">Jogador 1:</h3>
         <input type="text" name="jogador1" id="jg1" placeholder="Nickname 1">
 
@@ -20,7 +20,8 @@
         <input class="ml" id="btn" onclick="getName()" type="button" value="Ok">
     </div>
 
-    <h2 id="status">Preparando</h2>
+    <button id="btnRnc" onclick="Rnc()">Reiniciar</button>
+    <h2 id="status"></h2>
     <div id="fContainer">
         <div class="container">
             <div class="square" id="q1"></div>
@@ -38,7 +39,24 @@
             <div class="square" id="q9"></div>
         </div>
     </div>
+    <div id="history">
+        <table>
+            <caption><h3>Pontuação</h3></caption>
+            <tr>
+                <th>Nome</th>
+                <th>Pontos</th>
+            </tr>
+            <tr>
+                <td class="jogName"></td>
+                <td class="jogPont">0</td>
+            </tr>
+            <tr>
+                <td class="jogName"></td>
+                <td class="jogPont">0</td>
+            </tr>
+        </table>
+    </div>
     
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
