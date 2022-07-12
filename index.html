@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Velha</title>
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,9 +22,32 @@
         <h3 for="jogador2" class="ml">Jogador 2:</h3>
         <input type="text" name="jogador2" id="jg2" placeholder="Nickname 2">
 
-        <input class="ml" id="btn" onclick="getName()" type="button" value="Ok">
-    </div>
+        <br>
 
+        <input id="btn" onclick="getName()" type="button" value="Novo Jogo">
+
+        <img src="img/Steve.webp" alt="steve">
+
+        <p>Digite o nome de cada jogador e pressione <span>Novo Jogo</span> para iniciar a partida!</p>
+    </div>
+    <br>
+    <div id="history">
+        <table>
+            <caption><h3>Pontuação</h3></caption>
+            <tr>
+                <th>Nome</th>
+                <th>Pontos</th>
+            </tr>
+            <tr>
+                <td class="jogName"></td>
+                <td class="jogPont">0</td>
+            </tr>
+            <tr>
+                <td class="jogName"></td>
+                <td class="jogPont">0</td>
+            </tr>
+        </table>
+    </div>
     <button id="btnRnc" onclick="Rnc()">Reiniciar</button>
     <h2 id="status"></h2>
     <div id="fContainer">
@@ -39,23 +67,7 @@
             <div class="square" id="q9"></div>
         </div>
     </div>
-    <div id="history">
-        <table>
-            <caption><h3>Pontuação</h3></caption>
-            <tr>
-                <th>Nome</th>
-                <th>Pontos</th>
-            </tr>
-            <tr>
-                <td class="jogName"></td>
-                <td class="jogPont">0</td>
-            </tr>
-            <tr>
-                <td class="jogName"></td>
-                <td class="jogPont">0</td>
-            </tr>
-        </table>
-    </div>
+    
     
     <script src="script.js"></script>
 </body>

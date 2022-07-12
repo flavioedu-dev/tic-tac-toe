@@ -19,15 +19,17 @@ function clickBtn(){
         statusJg.style.visibility = "visible"
         btnRnc.style.visibility = "visible"
         history.style.visibility = "visible"
+        document.body.style.overflow = "auto"
     }, 100)
 
     document.getElementById("equipe").style.visibility = "hidden"
+    document.getElementById("equipe").remove()
+    /* document.getElementById("equipe").style.position = "absolute" */
 
-    for(let i=0; i < click.children.length; i++){
+    /* for(let i=0; i < click.children.length; i++){
 
         for(let j=0; j < click.children[i].children.length; j++){
 
-            /* console.log(click.children[i].children[j]) */
             
             if(click.children[i].children[j].childElementCount != 0){
                 click.children[i].children[j].children[0].remove()      
@@ -37,7 +39,7 @@ function clickBtn(){
             
         }
     
-    }
+    } */
     score()
 
     cont = 0
@@ -100,6 +102,7 @@ function newJogo(){
 }
 
 function Rnc(){
+    document.documentElement.scrollTop = 0;
     location.reload()
 }
 
