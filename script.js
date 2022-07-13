@@ -88,7 +88,7 @@ function newJogo(){
                     
                 }
 
-                click.children[i].children[j].style.backgroundColor = "#66b83f"
+                click.children[i].children[j].style.backgroundColor = "#8b8b8b"
                 
             }
         
@@ -102,7 +102,7 @@ function newJogo(){
 }
 
 function Rnc(){
-    document.documentElement.scrollTop = 0;
+    document.documentElement.scrollTop = 0
     location.reload()
 }
 
@@ -155,11 +155,13 @@ click.addEventListener('click', (e) => {
         }
     }
 
+    win = 0
+
     for (k in seq){
 
         let jog1 = 0
         let jog2 = 0
-        win = 0
+        /* win = 0 */
 
         for(l in seq[k]){
 
@@ -216,8 +218,20 @@ click.addEventListener('click', (e) => {
             if(click.children[i].children[j].childElementCount != 0){
                 zebra++
             }
-            
-            if(zebra==9 & win<=Win1+Win2){
+            /* if(zebra==9){
+                partidas++
+            } */
+
+            /* if(zebra == 9 & win == 1){
+                if(zebra==9 & Win1+Win2==partidas){
+                    setTimeout(() => {
+                        alert("Deu zebra!")
+                        newJogo()
+                    }, 100)
+                    }
+            } */
+            if(zebra == 9 & win == 0){
+
                 setTimeout(() => {
                     alert("Deu zebra!")
                     newJogo()
