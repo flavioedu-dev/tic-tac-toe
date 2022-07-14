@@ -2,50 +2,95 @@
     margin: 0;
     padding: 0;
 
-/*     border: 1px solid black; */
+    /* border: 1px solid black; */
 }
 
 body{
     width: 100%;
+    height: 100%;
     font-family: 'Inria Sans', sans-serif;
-
     text-align: center;
     background-color: #A36B2F;
-    margin-top: 1em;
+    /* margin-top: 1em; */
     color: #171615;
 
-    overflow: hidden;
+    /* overflow: hidden; */
+
+}
+body h1{
+    width: 100%;
+    margin: 6vh auto;
+
+    font-size: 3rem;
 }
 #fContainer, #status, #btnRnc{
     visibility: hidden;
+    position: absolute;
+    top: 0
 }
 
 /* #fContainer, #status{
     width: 100%;
 } */
 .equipe{
-    width: 50%;
+    width: 60%;
     /* display: flex; */
     /* justify-content: space-between; */
 
-    font-size: 1.4em;
     margin: 2em auto 1em auto;
     font-weight: bold;
     color: #fff;
+
+    /* border: 1px solid black; */
+}
+.equipe h3{
+    margin-bottom: 0.5em;
+    font-size: 2rem;
 }
 .equipe input[type="text"]{
     text-indent: 5px;
     background-color: #66b83f;
     border: none;
-    padding: 0.8rem;
-    /* margin-bottom: 1em; */
+    /* border-radius: 2px; */
+    width: 14em;
+    padding: 1em;
+    margin-bottom: 1.5em;
+
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+.equipe input[type="button"]{
+    display: block;
+    margin: auto;
+    font-size: 1rem;
+
+    box-shadow: 1px 1px 1px 1px black;
+}
+.equipe input[type="button"]:hover{
+    cursor: pointer;
+    
+}
+.equipe input[type="text"]::placeholder{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.856);
 }
 .equipe img{
-    width: 5em;
+    width: 6.5em;
+    position: relative;
+    left: 7.5em;
+    bottom: 2.5em;
     /* position: absolute;
     left: 6em;
     bottom: 2em; */
     /* border: 1px solid black; */
+}
+.equipe p{
+    font-size: 1.5rem;
+
+    /* border: 1px solid black; */
+}
+.equipe p span{
+    font-style: italic;
 }
 #btn{
     /* background-color: #66b83f; */
@@ -57,21 +102,31 @@ body{
     
 }
 #btnRnc{
-    margin-bottom: 1em;
+    margin: 1rem auto;
+    padding: 0.3rem;
+    border-radius: 3px;
+    border: none;
+    background-color: #f0f0f0;
+}
+#btnRnc:hover{
+    cursor: pointer;
 }
 #status{
     margin-bottom: 0.5em;
 }
 
+#fContainer{
+    margin: 1em auto 0 auto;
+}
 .container{
     display: flex;
     justify-content: center;
-
     background-color: #c6c6c6;
     /* border: 1px solid black; */
-    width: 25%;
+    width: max-content;
     margin: 0 auto;
 }
+
 .square{
     width: 100px;
     height: 100px;
@@ -80,10 +135,18 @@ body{
     border: 2px inset #fff;
     margin: 6px 3px 6px 3px;
 }
+.square:hover{
+    cursor: pointer;
+}
+
 #history{
-    width: 35%;
+    width: 40%;
     margin: auto;
     visibility: hidden;
+    position: absolute;
+    top: 0;
+
+    font-size: 1.2rem;
 
 }
 #history table, th, td{
@@ -102,78 +165,93 @@ body{
     background-color: #66b83f;
     padding: 0.3em;
 }
+footer{
+    height: 5vh;
+    /* text-align: center; */
+    font-weight: bold;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+
+@media (max-width: 1025px){
+    .equipe{
+        width: 60%;
+    }
+    #history{
+        width: 40%;
+    }
+    footer{
+        height: 5vh;
+        padding-top: 2em;
+    }
+}
+
+@media (max-width: 800px){
+    .equipe{
+        width: 80%;
+    }
+    #history{
+        width: 50%;
+    }
+    footer{
+        height: 5vh;
+        padding-top: 2em;
+    }
+}
 
 @media (max-width: 600px){
-    body{
-        overflow: hidden;
-    }
-    body h1{
-        width: 80%;
-        margin: 2em auto;
-        margin-bottom: 1.5rem;
-
-        font-size: 2.5rem;
-
-        /* text-shadow: #000 2px 3px 2px; */
-        /* border: 1px solid black; */
-        }
     .equipe{
-        /* width: 100%; */
+        width: 60%;
+    }
+    #history{
+        width: 50%;
+    }
+    footer{
+        height: 5vh;
+        padding-top: 2em;
+    }
+}
 
-        font-size: 1em;
-        margin: 2em auto;
-        font-weight: bold;
+@media (max-width: 480px){
+
+    .equipe{
+        width: 80%;
     }
-    .equipe h3{
-        margin-bottom: 0.3em;
-        font-size: 1.5rem;
+    #history{
+        width: 70%;
     }
-    .equipe input[type="button"]{
-        display: block;
-        margin: auto;
-        font-size: 0.9rem;
+    footer{
+        height: 5vh;
     }
-    .equipe input[type="text"]{
-        text-indent: 5px;
-        width: 10em;
-        padding: 0.5em;
-        margin-bottom: 1em;
-    }
-    .equipe input[type="text"]::placeholder{
-        color: rgba(255, 255, 255, 0.856);
+}
+
+@media (max-width: 380px){
+    .equipe{
+        width: 80%;
+
     }
     .equipe img{
         width: 5em;
-        position: relative;
-        left: 6em;
-        bottom: 2em;
-        /* border: 1px solid black; */
+        left: 6.5em;
+        bottom: 2.5em;
     }
-    .equipe p{
-        font-size: 1.5rem;
 
-        /* border: 1px solid black; */
+    .square{
+        width: 80px;
+        height: 80px;
     }
-    .equipe p span{
-        font-style: italic;
+    .square img{
+        width: 80px;
     }
-    .ml{
-        margin-left: 0;
-    }
-/*     #status{
-        width: 80%;
-        margin: auto;
-    } */
     #history{
-        width: 35%;
-        margin: auto;
-        visibility: hidden;
+        width: 70%;
     }
-    #btnRnc{
-        margin: 2rem auto;
-    }
-    .container{
-        width: max-content;
-        margin: 0 auto;
+    footer{
+        height: 5vh;
     }
 }

@@ -16,14 +16,24 @@ function clickBtn(){
 
     setTimeout(() => {
         click.style.visibility = "visible"
+        click.style.position = "static"
+
         statusJg.style.visibility = "visible"
+        statusJg.style.position = "static"
+
         btnRnc.style.visibility = "visible"
+        btnRnc.style.position = "static"
+
         history.style.visibility = "visible"
+        history.style.position = "static"
+
         document.body.style.overflow = "auto"
     }, 100)
 
     document.getElementById("equipe").style.visibility = "hidden"
     document.getElementById("equipe").remove()
+
+    document.getElementById("foot").style.paddingTop = "1em"
     /* document.getElementById("equipe").style.position = "absolute" */
 
     /* for(let i=0; i < click.children.length; i++){
@@ -70,7 +80,7 @@ function getName(){
 
 function newJogo(){
 
-    let nJogo = confirm("Quer iniciar um novo jogo?")
+    let nJogo = confirm("Deseja iniciar um novo jogo?")
 
     if(nJogo == true){
         /* console.log("Sim") */
