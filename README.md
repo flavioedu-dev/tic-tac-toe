@@ -1,4 +1,4 @@
-# Jogo-da-Velha
+# Tic-Tac-Toe
 >Tic-tac-toe with minecraft texture in development.
 
 <br>
