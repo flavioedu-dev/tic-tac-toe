@@ -1,6 +1,6 @@
 # Jogo-da-Velha
->Jogo da velha com textura do minecraft em desenvolvimento.
+>Tic-tac-toe with minecraft texture in development.
 
 <br>
 
-Acesse: https://xflax00.github.io/Jogo-da-Velha/
+Access: https://xflax00.github.io/Jogo-da-Velha/
