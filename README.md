@@ -1,5 +1,5 @@
 # Tic-Tac-Toe
->Tic-tac-toe with minecraft texture in development.
+>Tic-tac-toe with minecraft texture.
 
 <br>
 
