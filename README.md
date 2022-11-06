@@ -1,6 +1,6 @@
-# Tic-Tac-Toe
->Tic-tac-toe with minecraft texture.
+# Jogo da Velha
+> Jogo da velha com textura de minecraft.
 
 <br>
 
-Access: https://xflax00.github.io/tic-tac-toe/
+Acesse: https://xflax00.github.io/tic-tac-toe/
