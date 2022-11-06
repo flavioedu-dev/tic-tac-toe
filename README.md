@@ -3,4 +3,4 @@
 
 <br>
 
-Acesse: https://xflax00.github.io/tic-tac-toe/
+Acesse: https://xflax00.github.io/jogo-da-velha/
