@@ -59,14 +59,14 @@ body h1{
     box-shadow: 1px 1px 1px 1px black;
 }
 
-.equipe input[type="button"]{
+.equipe button{
     display: block;
     margin: auto;
     font-size: 1rem;
 
     box-shadow: 1px 1px 1px 1px black;
 }
-.equipe input[type="button"]:hover{
+.equipe button{
     cursor: pointer;
     
 }

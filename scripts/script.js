@@ -34,28 +34,14 @@ function clickBtn(){
     document.getElementById("equipe").remove()
 
     document.getElementById("foot").style.paddingTop = "1em"
-    /* document.getElementById("equipe").style.position = "absolute" */
 
-    /* for(let i=0; i < click.children.length; i++){
-
-        for(let j=0; j < click.children[i].children.length; j++){
-
-            
-            if(click.children[i].children[j].childElementCount != 0){
-                click.children[i].children[j].children[0].remove()      
-            }
-
-            click.children[i].children[j].style.backgroundColor = "#66b83f"
-            
-        }
-    
-    } */
     score()
 
     cont = 0
 }
 
 function getName(){
+
     jogName1 = document.getElementById("jg1").value
     jogName2 = document.getElementById("jg2").value
 
@@ -114,6 +100,12 @@ function newJogo(){
 function Rnc(){
     document.documentElement.scrollTop = 0
     location.reload()
+}
+
+function submitForm(){
+    document.formulario.submit()
+
+    getName()
 }
 
 const seq = [["q1","q2","q3"],["q4","q5","q6"],["q7","q8","q9"],["q1","q4","q7"],["q2","q5","q8"],["q3","q6","q9"],["q1","q5","q9"],["q3","q5","q7"]]
@@ -228,18 +220,7 @@ click.addEventListener('click', (e) => {
             if(click.children[i].children[j].childElementCount != 0){
                 zebra++
             }
-            /* if(zebra==9){
-                partidas++
-            } */
 
-            /* if(zebra == 9 & win == 1){
-                if(zebra==9 & Win1+Win2==partidas){
-                    setTimeout(() => {
-                        alert("Deu zebra!")
-                        newJogo()
-                    }, 100)
-                    }
-            } */
             if(zebra == 9 & win == 0){
 
                 setTimeout(() => {

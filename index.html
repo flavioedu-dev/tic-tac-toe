@@ -10,21 +10,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
     <h1>Jogo da Velha</h1>
     <div class="equipe" id="equipe">
-        <h3 for="jogador1">Jogador 1:</h3>
-        <input type="text" name="jogador1" id="jg1" placeholder="Nickname 1">
 
-        <h3 for="jogador2">Jogador 2:</h3>
-        <input type="text" name="jogador2" id="jg2" placeholder="Nickname 2">
-
-        <br>
-
-        <input class="ml" id="btn" onclick="getName()" type="button" value="Novo Jogo">
+        <form name="formulario" action="/" method="POST">
+            <h3 for="jogador1">Jogador 1:</h3>
+            <input name="jog1" type="text" id="jg1" placeholder="Nickname 1">
+            <h3 for="jogador2">Jogador 2:</h3>
+            <input type="text" name="jog2" id="jg2" placeholder="Nickname 2">
+            <br>
+            <!-- <input id="btn" onclick="getName()" type="button" value="Novo Jogo"> -->
+            <button id="btn" onclick="submitForm()">Novo Jogo</button>
+        </form>
 
         <img src="img/Steve.webp" alt="steve">
 
@@ -71,6 +72,6 @@
     <footer id="foot">Developed &copy;xFlax00</footer>
     
     
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>

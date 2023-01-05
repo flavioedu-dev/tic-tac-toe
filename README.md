@@ -3,7 +3,7 @@
 <br>
 
 ### Sandbox
-> Branch para teste com backend
+> Branch para testes com backend
 
 <br>
 
