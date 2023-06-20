@@ -6,7 +6,6 @@
 
 <img src="https://cdn.pixabay.com/photo/2016/11/11/14/49/minecraft-1816996_1280.png" width="200em" />
 
-<b>Access in:</b> https://xflax00.github.io/tic-tac-toe/
 
 ### Technologies used:
 - HTML
